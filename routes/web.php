@@ -28,3 +28,7 @@ Route::get('/estudiantes','ControllerEstudiantes@mostrar');
 Route::post('/estudiantes','ControllerEstudiantes@store')->name('estudiantes.store');
 
 Route::resource('/Lista',ListaController::class);
+
+Route::delete('Lista/{matricula}', 'ListaController@destroy')
+->name('Lista.destroy');
+

@@ -13,10 +13,16 @@ class ListaController extends Controller
 {
 $estudiante= estudiantes::all();
 //return $estudiante;
-//return view ('VistaEstudiantes', compact('estudiante'));
-$texto=trim($request->get ('texto'));
+return view ('VistaEstudiantes', compact('estudiante'));
+/*$texto=trim($request->get ('texto'));
 $estudiante=DB::table ('estudiantes')->select('Matricula','Nombre','Direccion') ->where ('matricula','=',$texto)->paginate(10);
-return view ('VistaEstudiantes', compact('estudiante',$texto));
-
+return view ('VistaEstudiantes', compact('estudiante',$texto));*/
+}
+public function destroy($id)
+{
+$estudiante= estudiantes::find($id);
+//dd($estudiante);
+$estudiante->delete();
+return redirect()->route('Lista.index');
 }
 }

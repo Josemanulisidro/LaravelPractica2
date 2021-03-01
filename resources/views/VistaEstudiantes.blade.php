@@ -46,7 +46,15 @@
 <td>{{$estudiantes->Matricula}}</td>
 <td>{{$estudiantes->Nombre}}</td>
 <td>{{$estudiantes->Direccion}}</td>
-<td> Editar|Eliminar</td>
+<td> Editar|
+<form method="POST" action="{{ url("Lista/{$estudiantes->id}") }}">
+@csrf
+@method('DELETE')
+<button type="submit" onclick="return confirm ('¿Deseas Borrar?');">Eliminar</button>
+</form>
+
+
+</td>
 			</tr>
 			@endforeach
 		</tbody>
