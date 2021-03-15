@@ -17,6 +17,7 @@ class ControllerEstudiantes extends Controller
     $estudiantes->Nombre=$request->Nombre;
     $estudiantes->Direccion=$request->Direccion;
     $estudiantes-> save();
+    
     return redirect('estudiantes');
     //retun $requests->all();
 }

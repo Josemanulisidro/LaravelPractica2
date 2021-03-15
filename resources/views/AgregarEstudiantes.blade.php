@@ -33,6 +33,7 @@
 </div>
 <div class="form-group">
 <input type="submit" value="Enviar" class="btn btn-primary">
+
 {{ csrf_field() }}</div>
 </form>
 </div>

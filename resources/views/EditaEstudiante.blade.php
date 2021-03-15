@@ -10,6 +10,7 @@
 <body>
 <div clas="container">
 <div class="row">
+
 <div class="col">
 <h2>Editar estudiantes</h2>
 <form method="post" action="{{route ('Lista.update' ,$estudiante)}}" >
@@ -27,7 +28,10 @@
 </div>
 <div class="form-group">
 <input type="submit" value="Actualizar" class="btn btn-primary">
-<input type= "submit" value="Cancelar" class="btn btn-primary">
+<form action="{{route('Lista.index')}}" method= "get">
+<input type= "submit" value="Cancelar" class="btn btn-primary" >
+
+</form>
 {{ csrf_field() }}
 </div>
 </form>

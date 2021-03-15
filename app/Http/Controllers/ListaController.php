@@ -31,6 +31,7 @@ public function edit($id)
 $estudiante = estudiantes::whereId($id)->firstOrFail();
 return view('EditaEstudiante', compact('estudiante')); 
 }
+
 public function update(Request $request, $id)
 {
 $estudiante= estudiantes::findOrFail($id);
@@ -39,5 +40,6 @@ $estudiante->Nombre =$request->input('Nombre');
 $estudiante->Direccion =$request->input('Direccion');
 $estudiante->save();
 return redirect()->route('Lista.index'); 
+
 }
 }
