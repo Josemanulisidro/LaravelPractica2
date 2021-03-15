@@ -46,12 +46,20 @@
 <td>{{$estudiantes->Matricula}}</td>
 <td>{{$estudiantes->Nombre}}</td>
 <td>{{$estudiantes->Direccion}}</td>
-<td> Editar|
+
+<td> <td> <a href="{{ route ('Lista.edit',$estudiantes->id) }}" class="btn btn-primary btn-sm btn btn-warning btn-sm">Actualizar</a>
+</td>
+
+</td>
+</form>
+<td>
 <form method="POST" action="{{ url("Lista/{$estudiantes->id}") }}">
 @csrf
 @method('DELETE')
-<button type="submit" onclick="return confirm ('¿Deseas Borrar?');">Eliminar</button>
+<button type="submit" class= "btn btn-primary btn-sm btn btn-danger" onclick="return confirm ('¿Deseas Borrar?');">Eliminar</button>
 </form>
+
+
 
 
 </td>
