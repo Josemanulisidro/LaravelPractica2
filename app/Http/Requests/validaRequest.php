@@ -22,9 +22,9 @@ class validaRequest extends FormRequest
     public function rules()
     {
         return [
-            'nombre' => 'required',
-            'email' => 'required|email',
-            'mensaje' => 'required',
+            'Matricula' => 'required|max:10',
+            'Nombre' => 'required|regex:/^[\pL\s\-]+$/u',
+            'Direccion' => 'required|regex:/^([0-9a-zA-ZñÑáéíóúÁÉÍÓÚ_-])+((\s*)+([0-9a-zA-ZñÑáéíóúÁÉÍÓÚ_-]*)*)+$/',
         ];
     }
 }

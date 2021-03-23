@@ -28,13 +28,12 @@
 </div>
 <div class="form-group">
 <input type="submit" value="Actualizar" class="btn btn-primary">
-<form action="{{route('Lista.index')}}" method= "get">
-<input type= "submit" value="Cancelar" class="btn btn-primary" >
-
-</form>
+<input type= "submit" value="Cancelar" class="btn btn-primary">
 {{ csrf_field() }}
 </div>
 </form>
+
+
 </div>
 </div>
 </div>
