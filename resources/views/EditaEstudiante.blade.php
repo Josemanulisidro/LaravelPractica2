@@ -24,8 +24,11 @@
 </div>
 <div class="form-group">
 <input type="text" name="Direccion" class="form-control"placeholder="Dirección" value="{{$estudiante->Direccion}}"></textarea>
-
 </div>
+<div class="form-group">
+<input type="text" name="Edad" class="form-control"placeholder="Edad" value="{{$estudiante->Edad}}">
+</div>
+
 <div class="form-group">
 <input type="submit" value="Actualizar" class="btn btn-primary">
 <input type= "submit" value="Cancelar" class="btn btn-primary">

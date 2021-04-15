@@ -38,6 +38,7 @@
 <th> Matrícula</th>
 <th> Nombre</th>
 <th> Dirección </th>
+<th> Edad </th>
 <th> Acciones </th>
 			</tr>
 		    </thead>
@@ -47,10 +48,14 @@
 <td>{{$estudiantes->Matricula}}</td>
 <td>{{$estudiantes->Nombre}}</td>
 <td>{{$estudiantes->Direccion}}</td>
+<td>{{$estudiantes->Edad}}</td>
 
 <td> <td> <a href="{{ route ('Lista.edit',$estudiantes->id) }}" class="btn btn-primary btn-sm btn btn-warning btn-sm">Actualizar</a>
 </td>
 
+<td> <td> <a href="{{ route ('Lista.edit',$estudiantes->id) }}" class="btn btn-primary btn-sm btn btn-warning btn-sm">grafica</a>
+</td>
+	
 </td>
 </form>
 <td>
@@ -59,9 +64,6 @@
 @method('DELETE')
 <button type="submit" class= "btn btn-primary btn-sm btn btn-danger" onclick="return confirm ('¿Deseas Borrar?');">Eliminar</button>
 </form>
-
-
-
 
 </td>
 			</tr>
