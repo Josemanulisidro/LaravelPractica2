@@ -36,6 +36,7 @@ Route::get('Lista/{estudiante}/edit', 'ListaController@edit')->name('Lista.edit'
 
 Route::patch('Lista/{estudiante}/edit', 'ListaController@update')->name('Lista.update');
 
+Route::get('pdf', 'PDFController@PDF')->name('descargaPDF');
 
 
 

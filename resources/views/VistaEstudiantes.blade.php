@@ -38,8 +38,9 @@
 <th> Matrícula</th>
 <th> Nombre</th>
 <th> Dirección </th>
-<th> Edad </th>
 <th> Acciones </th>
+<th colspan="2" > Acciones </th> <th><a href="{{route('descargaPDF')}}">PDF</a> </th>
+
 			</tr>
 		    </thead>
             <tbody>
@@ -48,7 +49,7 @@
 <td>{{$estudiantes->Matricula}}</td>
 <td>{{$estudiantes->Nombre}}</td>
 <td>{{$estudiantes->Direccion}}</td>
-<td>{{$estudiantes->Edad}}</td>
+
 
 <td> <td> <a href="{{ route ('Lista.edit',$estudiantes->id) }}" class="btn btn-primary btn-sm btn btn-warning btn-sm">Actualizar</a>
 </td>
